@@ -19,9 +19,13 @@ Teensy provides a visual tool for creating patches of the audio components in th
 Sensors to Sine Waves
 =====================
 
-1. Start by using the GUI tool to create the following diagram. 
+1. Start by using the GUI tool to create the following diagram. This diagram connects a different sine wave generator to the left and right channels of the teensy audio shield. The SGTL5000 is the control chip for the audio shield, we will issues some commands to it in order to turn the audio on for our finished sketch. 
 
 ![alt text](sinewavegui.png "Layout of sinewave to i2s connections")
+
+2. Click the EXPORT button on the top of the page. Copy the resulting the code and paste it into a new sketch in Teensyduino.
+
+It will generate some code like the following. You will find some small differences in the comments depending on the positions of the objects in your sketch. 
 
     #include <Audio.h> 
     #include <Wire.h> 
@@ -38,8 +42,7 @@ Sensors to Sine Waves
     // GUItool: end automatically generated code 
 
 
-
-
+3. We will add some code to the template. Your blank sketch will start with a 
 
     #include <Audio.h> 
     #include <Wire.h> 
